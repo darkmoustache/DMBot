@@ -85,6 +85,7 @@ function AutoJoinUI()
 	{
 		document.getElementById("autojoin_button").src= "http://darkmoustache.tk/dmbot/images/button_on.png";
 		AutoJoinStatus = true;
+		API.djJoin();
 		AutoJoin();
 	}
 	else

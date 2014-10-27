@@ -1,4 +1,9 @@
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/**
+ * 
+ * Authors: Darkmoustache, Boost_Killer
+ * Version: 1.1.0
+ *
+ */
 
 var MenuStatus = false;
 var AutoWootStatus = false;
@@ -21,7 +26,7 @@ ChatColor("About: /dmbot", "DeepSkyBlue");
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//UI
+//GUI
 $("#chat").append('<div id="dmbot_menu" style="align:left;width:120px;height:32px;margin-left:-120px;margin-top:7px;"><img id="dmbot_share_button" style="margin:3px;cursor:pointer;" title="Share" src="http://darkmoustache.tk/dmbot/images/bouton_DMBot.png" alt="Share" width="32" height="32" onClick="DMBotShare()"/><a target="blank" href="http://darkmoustache.tk/dmbot"><img id="dmbot_site_button" style="margin:3px;cursor:pointer;" title="Website" src="http://darkmoustache.tk/dmbot/images/bouton_web.png" alt="Website" width="32" height="32"/></a><img id="dmbotmenu_button" style="margin:3px;cursor:pointer;" title="Menu" src="http://darkmoustache.tk/dmbot/images/bouton_plus.png" alt="Menu" width="32" height="32" onClick="DMBotMenu()"/></div>');
 $("#chat").append('<br><div onMouseOver="DivOn()" onMouseOut="DivOff()" id="dmbot_ui" style="display:none;width:157px;height:85px;margin-left:-157px;"><table width="150" style="text-align:right;"><tr><th>AutoWoot: <img id="autowoot_button" style="margin-top:1px;cursor:pointer;" title="AutoWoot" src="http://darkmoustache.tk/dmbot/images/button_off.png" alt="AutoWoot" width="32" height="32" onClick="AutoWootUI()"/></tr></th><tr><th>AutoJoin: <img id="autojoin_button" style="margin-top:1px;cursor:pointer;" title="AutoJoin" src="http://darkmoustache.tk/dmbot/images/button_off.png" alt="Autojoin" width="32" height="32" onClick="AutoJoinUI()"/></tr></th><tr><th>Music: <img id="music_button" style="margin-top:1px;cursor:pointer;" title="Music" src="http://darkmoustache.tk/dmbot/images/button_on.png" alt="Music" width="32" height="32" onClick="MusicUI()"/></tr></th></table></div>');
 
@@ -155,7 +160,6 @@ function Music()
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//Commandes
 API.on(API.CHAT_COMMAND,Commands);
 function Commands(cmd)
 {

@@ -33,7 +33,7 @@ $("#chat").append('<br><div onMouseOver="DivOn()" onMouseOut="DivOff()" id="dmbo
 //DMBOT Share
 function DMBotShare()
 {
-	API.sendChat("/me use DMBot: http://darkmoustache.tk");
+	API.sendChat("/me uses DMBot: http://darkmoustache.tk");
 }
 
 function DivOn()

@@ -3,7 +3,7 @@
  * Authors: Darkmoustache, Boost_Killer
  * Version: 1.1.0
  * WebSite: http://darkmoustache.tk
- * 
+ *
  */
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -29,8 +29,8 @@ ChatColor("About: /dmbot", "DeepSkyBlue");
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //GUI
-$("#chat").append('<div id="dmbot_menu" style="align:left;width:120px;height:32px;margin-left:-120px;margin-top:7px;"><img id="dmbot_share_button" style="margin:3px;cursor:pointer;" title="Share" src="http://darkmoustache.tk/dmbot/images/bouton_DMBot.png" alt="Share" width="32" height="32" onClick="DMBotShare()"/><a target="blank" href="http://darkmoustache.tk/dmbot"><img id="dmbot_site_button" style="margin:3px;cursor:pointer;" title="Website" src="http://darkmoustache.tk/dmbot/images/bouton_web.png" alt="Website" width="32" height="32"/></a><img id="dmbotmenu_button" style="margin:3px;cursor:pointer;" title="Menu" src="http://darkmoustache.tk/dmbot/images/bouton_plus.png" alt="Menu" width="32" height="32" onClick="DMBotMenu()"/></div>');
-$("#chat").append('<br><div onMouseOver="DivOn()" onMouseOut="DivOff()" id="dmbot_ui" style="display:none;width:157px;height:85px;margin-left:-157px;"><table width="150" style="text-align:right;"><tr><th>AutoWoot: <img id="autowoot_button" style="margin-top:1px;cursor:pointer;" title="AutoWoot" src="http://darkmoustache.tk/dmbot/images/button_off.png" alt="AutoWoot" width="32" height="32" onClick="AutoWootUI()"/></tr></th><tr><th>AutoJoin: <img id="autojoin_button" style="margin-top:1px;cursor:pointer;" title="AutoJoin" src="http://darkmoustache.tk/dmbot/images/button_off.png" alt="Autojoin" width="32" height="32" onClick="AutoJoinUI()"/></tr></th><tr><th>Music: <img id="music_button" style="margin-top:1px;cursor:pointer;" title="Music" src="http://darkmoustache.tk/dmbot/images/button_on.png" alt="Music" width="32" height="32" onClick="MusicUI()"/></tr></th></table></div>');
+$("#chat").append('<div id="dmbot_menu" style="align:left;width:120px;height:32px;margin-left:-120px;margin-top:7px;"><img id="dmbot_share_button" style="margin:3px;cursor:pointer;" title="Share" src="https://static.e-junkie.com/sslpic/133967.3a8b03b655c0adbdb6722a059e10ac31.jpg" alt="Share" width="32" height="32" onClick="DMBotShare()"/><a target="blank" href="http://darkmoustache.tk/dmbot"><img id="dmbot_site_button" style="margin:3px;cursor:pointer;" title="Website" src="https://static.e-junkie.com/sslpic/133969.fd7a098792cd39b281c352d5e29ab16e.jpg" alt="Website" width="32" height="32"/></a><img id="dmbotmenu_button" style="margin:3px;cursor:pointer;" title="Menu" src="https://static.e-junkie.com/sslpic/133968.8c4fb3a1eeaccc2151835a892dbafe3b.jpg" alt="Menu" width="32" height="32" onClick="DMBotMenu()"/></div>');
+$("#chat").append('<br><div onMouseOver="DivOn()" onMouseOut="DivOff()" id="dmbot_ui" style="display:none;width:157px;height:85px;margin-left:-157px;"><table width="150" style="text-align:right;"><tr><th>AutoWoot: <img id="autowoot_button" style="margin-top:1px;cursor:pointer;" title="AutoWoot" src="https://static.e-junkie.com/sslpic/133965.45f3458c998b72e5b4a32012520f3a90.jpg" alt="AutoWoot" width="32" height="32" onClick="AutoWootUI()"/></tr></th><tr><th>AutoJoin: <img id="autojoin_button" style="margin-top:1px;cursor:pointer;" title="AutoJoin" src="https://static.e-junkie.com/sslpic/133965.45f3458c998b72e5b4a32012520f3a90.jpg" alt="Autojoin" width="32" height="32" onClick="AutoJoinUI()"/></tr></th><tr><th>Music: <img id="music_button" style="margin-top:1px;cursor:pointer;" title="Music" src="https://static.e-junkie.com/sslpic/133964.4f75f4b4ffb9bda74b01c3942ac1cdd9.jpg" alt="Music" width="32" height="32" onClick="MusicUI()"/></tr></th></table></div>');
 
 //DMBOT Share
 function DMBotShare()
@@ -69,13 +69,13 @@ function AutoWootUI()
 {
 	if(AutoWootStatus === false)
 	{
-		document.getElementById("autowoot_button").src= "http://darkmoustache.tk/dmbot/images/button_on.png";
+		document.getElementById("autowoot_button").src= "https://static.e-junkie.com/sslpic/133964.4f75f4b4ffb9bda74b01c3942ac1cdd9.jpg";
 		AutoWootStatus = true;
 		$('#woot').click();
 	}
 	else
 	{
-		document.getElementById("autowoot_button").src= "http://darkmoustache.tk/dmbot/images/button_off.png";
+		document.getElementById("autowoot_button").src= "https://static.e-junkie.com/sslpic/133965.45f3458c998b72e5b4a32012520f3a90.jpg";
 		AutoWootStatus = false;
 	}
 }
@@ -85,14 +85,14 @@ function AutoJoinUI()
 {
 	if(AutoJoinStatus === false)
 	{
-		document.getElementById("autojoin_button").src= "http://darkmoustache.tk/dmbot/images/button_on.png";
+		document.getElementById("autojoin_button").src= "https://static.e-junkie.com/sslpic/133964.4f75f4b4ffb9bda74b01c3942ac1cdd9.jpg";
 		AutoJoinStatus = true;
 		API.djJoin();
 		AutoJoin();
 	}
 	else
 	{
-		document.getElementById("autojoin_button").src= "http://darkmoustache.tk/dmbot/images/button_off.png";
+		document.getElementById("autojoin_button").src= "https://static.e-junkie.com/sslpic/133965.45f3458c998b72e5b4a32012520f3a90.jpg";
 		AutoJoinStatus = false;
 		clearInterval(interval);
 	}
@@ -103,13 +103,13 @@ function MusicUI()
 {
 	if(MusicStatus === false)
 	{
-		document.getElementById("music_button").src= "http://darkmoustache.tk/dmbot/images/button_on.png";
+		document.getElementById("music_button").src= "https://static.e-junkie.com/sslpic/133964.4f75f4b4ffb9bda74b01c3942ac1cdd9.jpg";
 		MusicStatus = true;
 		Music();
 	}
 	else 
 	{
-		document.getElementById("music_button").src= "http://darkmoustache.tk/dmbot/images/button_off.png";
+		document.getElementById("music_button").src= "https://static.e-junkie.com/sslpic/133965.45f3458c998b72e5b4a32012520f3a90.jpg";
 		MusicStatus = false;
 		Music();
 	}

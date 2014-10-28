@@ -13,7 +13,7 @@ var AutoWootStatus = false;
 var MusicStatus = true;
 var AutoJoinStatus = false;
 var Volume;
-var WaitList = API.getWaitList().length();
+var WaitList = API.getWaitList().length;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

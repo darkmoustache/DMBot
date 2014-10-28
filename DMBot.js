@@ -22,9 +22,6 @@ function ChatColor(text, color){$("#chat-messages").append('<div style="border-l
 
 function ChatColorDefault(text, color){$("#chat-messages").append('<div style="color:' + color + '; font-weight:700; font-size:13px; padding-left:25px;align="center";">' + text + '<div>');}
 
-$("#users-button").click();
-$("#chat-button").click();
-
 ChatColor("DMBot was successfully launched !" , "Aqua");
 ChatColor("About: /dmbot", "DeepSkyBlue");
 

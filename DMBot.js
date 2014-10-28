@@ -13,6 +13,7 @@ var AutoWootStatus = false;
 var MusicStatus = true;
 var AutoJoinStatus = false;
 var Volume;
+var interval;
 var WaitList = API.getWaitList().length;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -140,7 +141,7 @@ function djUpdate()
 }
 
 function AutoJoin(){
-	var interval = setInterval(function(){if(WaitList != 50){API.djJoin();}}, 1);
+	interval = setInterval(function(){if(WaitList != 50){API.djJoin();}}, 1);
 }
 
 //Music

@@ -1,7 +1,7 @@
 /**
  * 
  * Authors: Darkmoustache, Boost_Killer
- * Version: 1.1.0
+ * Version: 1.2.0
  * WebSite: http://darkmoustache.tk
  *
  */
@@ -14,7 +14,6 @@ var MusicStatus = true;
 var AutoJoinStatus = false;
 var Volume;
 var interval;
-var WaitList = API.getWaitList().length;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -138,7 +137,7 @@ function djUpdate()
 }
 
 function AutoJoin(){
-	interval = setInterval(function(){if(WaitList != 50){API.djJoin();}}, 1);
+	interval = setInterval(function(){if(API.getWaitListPosition() === -1 && API.getWaitList().length != 50){API.djJoin();}}, 1);
 }
 
 //Music

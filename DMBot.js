@@ -13,7 +13,6 @@ var AutoWootStatus = false;
 var MusicStatus = true;
 var AutoJoinStatus = false;
 var Volume;
-var interval;
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -86,13 +85,11 @@ function AutoJoinUI()
 		document.getElementById("autojoin_button").src= "https://static.e-junkie.com/sslpic/133964.4f75f4b4ffb9bda74b01c3942ac1cdd9.jpg";
 		AutoJoinStatus = true;
 		API.djJoin();
-		AutoJoin();
 	}
 	else
 	{
 		document.getElementById("autojoin_button").src= "https://static.e-junkie.com/sslpic/133965.45f3458c998b72e5b4a32012520f3a90.jpg";
 		AutoJoinStatus = false;
-		clearInterval(interval);
 	}
 }
 
@@ -128,16 +125,14 @@ function AutoWoot()
 //Autojoin
 API.on(API.ADVANCE, djUpdate);
 API.on(API.WAIT_LIST_UPDATE, djUpdate);
+API.on(API.HISTORY_UPDATE, djUpdate);
+API.on(API.MOD_SKIP, djUpdate);
 function djUpdate() 
 {
    	if(AutoJoinStatus === true)
    	{
     	API.djJoin();
     }
-}
-
-function AutoJoin(){
-	interval = setInterval(function(){if(API.getWaitListPosition() === -1 && API.getWaitList().length != 50){API.djJoin();}}, 1);
 }
 
 //Music
